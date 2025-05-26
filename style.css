@@ -132,7 +132,6 @@ nav ul li a:hover::after{
     white-space: nowrap;
     border-right: 3px solid #85e208;
     animation: typing 3s steps(22), blink 0.5s step-end infinite alternate;
-    font-family: monospace;
   }
   
   /* Gradiente animado no nome */
