@@ -546,4 +546,33 @@ nav .fa-solid{
         left: 25px;
         cursor: pointer;
     }
+
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .about-cow-1, .about-cow-2{
+        flex-basis: 100%;
+    }
+
+    .about-cow-1{
+        margin-bottom: 30px;
+    }
+
+    .about-cow-2{
+        font-size: 14px;
+    }
+
+    .tab-links{
+        margin-right: 20px;
+        font-size: 16px;
+    }
+
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+
+    .copyright{
+        font-size: 14px;
+    }
 }
