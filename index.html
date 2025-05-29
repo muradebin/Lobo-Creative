@@ -294,10 +294,11 @@
             </div>
 
             <div class="contact-right">
-                <form>
-                    <input type="text" name="Name" placeholder="Seu nome" required>
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Nome" placeholder="Seu nome" required>
                     <input type="email" name="Email" placeholder="Seu email" required>
-                    <textarea name="Message" rows="6" placeholder="Sua mensagem"></textarea>
+                    <input type="number" name="Numero" placeholder="Seu número de telefone" required>
+                    <textarea name="Mensagem" rows="6" placeholder="Sua mensagem"></textarea>
                     <button type="submit" class="btn btn2">Enviar mensagem</button>
                 </form>
                 
@@ -306,14 +307,24 @@
     </div>
 
     <div class="copyright">
-        Copyright Murade Lobo
+        Copyright Murade Lobo 2025
     </div>
 
  </div>
- <script src="script.js"></script>
- <script>
 
-    </script>
+ <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwbA88fMYyc3p4gHusldFcAE5ZKo7QespOhbwBeU9237ISrsQbzOksTNnZUCxQluFXYDg/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+ <script src="script.js"></script>
 
 
 </body>
