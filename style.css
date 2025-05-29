@@ -31,7 +31,9 @@
     font-family: 'Neue Power Regular', sans-serif; /* Usando a fonte Regular por padrão */
     box-sizing: border-box;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 /* Estilo do body */
 body {
     background: #4200cb;
@@ -59,6 +61,14 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 10%;
+    background: rgba(66, 0, 203, 0.9);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
 }
 
 /* Estilo do logo */
