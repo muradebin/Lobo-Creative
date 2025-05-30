@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banners Promocionais - Lobo Creative</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/ba459475e0.js" crossorigin="anonymous"></script>
+
+    <style>
+        .service-detail {
+            padding: 120px 0 60px 0;
+        }
+        
+        .service-description {
+            margin: 30px 0;
+            line-height: 1.6;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .gallery-item {
+            background: #262626;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 300px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #85e208;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 30px;
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #6bc007;
+        }
+
+        .back-button i {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="../images/logotipo.png" class="logo" alt="logotipo" onclick="window.location.href='../index.html'">
+        <ul id="sidemenu">
+            <li><a href="../index.html#header">Home</a></li>
+            <li><a href="../index.html#about">Sobre</a></li>
+            <li><a href="../index.html#services">Serviços</a></li>
+            <li><a href="../index.html#portfolio">Portifolio</a></li>
+            <li><a href="../index.html#contact">Contacto</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+
+    <div class="service-detail">
+        <div class="container">
+            <h1 class="subtitle">Banners Promocionais</h1>
+            
+            <div class="service-description">
+                <p>Destaque sua marca e suas ofertas com banners promocionais que capturam a atenção do público. Na Lobo Creative, criamos designs impactantes que comunicam sua mensagem de forma clara e atraente, seja para mídias digitais ou impressas.</p>
+                
+                <p>Nossos banners incluem:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Design personalizado para cada campanha</li>
+                    <li>Formatos otimizados para diferentes plataformas</li>
+                    <li>Elementos visuais atraentes e modernos</li>
+                    <li>Mensagens claras e objetivas</li>
+                    <li>Adaptação para redes sociais</li>
+                    <li>Opções para impressão em alta qualidade</li>
+                </ul>
+            </div>
+
+            <h2 style="color: #85e208; margin-top: 40px;">Galeria de Projetos</h2>
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="images/banner-placeholder-1.jpg" alt="Exemplo de Banner 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/banner-placeholder-2.jpg" alt="Exemplo de Banner 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/banner-placeholder-3.jpg" alt="Exemplo de Banner 3">
+                </div>
+            </div>
+
+            <a href="../index.html#services" class="back-button">
+                <i class="fa-solid fa-arrow-left"></i>
+                Voltar aos Serviços
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convites Personalizados - Lobo Creative</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/ba459475e0.js" crossorigin="anonymous"></script>
+
+    <style>
+        .service-detail {
+            padding: 120px 0 60px 0;
+        }
+        
+        .service-description {
+            margin: 30px 0;
+            line-height: 1.6;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .gallery-item {
+            background: #262626;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 300px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #85e208;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 30px;
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #6bc007;
+        }
+
+        .back-button i {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="images/logotipo.png" class="logo" alt="logotipo" onclick="window.location.href='index.html'">
+        <ul id="sidemenu">
+            <li><a href="index.html#header">Home</a></li>
+            <li><a href="index.html#about">Sobre</a></li>
+            <li><a href="index.html#services">Serviços</a></li>
+            <li><a href="index.html#portfolio">Portifolio</a></li>
+            <li><a href="index.html#contact">Contacto</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+
+    <div class="service-detail">
+        <div class="container">
+            <h1 class="subtitle">Convites Personalizados</h1>
+            
+            <div class="service-description">
+                <p>Cada momento especial merece ser anunciado com elegância e personalidade. Na Lobo Creative, criamos convites que não são apenas informativos, mas verdadeiras obras de arte que capturam a essência do seu evento.</p>
+                
+                <p>Nossos serviços incluem:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Design exclusivo para casamentos, aniversários e eventos corporativos</li>
+                    <li>Ampla variedade de estilos e acabamentos</li>
+                    <li>Opções de papéis especiais e texturas</li>
+                    <li>Elementos personalizados como monogramas e ilustrações</li>
+                    <li>Coordenação com a identidade visual do evento</li>
+                    <li>Versões digitais para compartilhamento online</li>
+                </ul>
+            </div>
+
+            <h2 style="color: #85e208; margin-top: 40px;">Galeria de Projetos</h2>
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="images/convite-placeholder-1.jpg" alt="Exemplo de Convite 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/convite-placeholder-2.jpg" alt="Exemplo de Convite 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/convite-placeholder-3.jpg" alt="Exemplo de Convite 3">
+                </div>
+            </div>
+
+            <a href="../index.html#services" class="back-button">
+                <i class="fa-solid fa-arrow-left"></i>
+                Voltar aos Serviços
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

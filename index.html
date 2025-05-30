@@ -103,7 +103,7 @@
                     <h2>Cardápios</h2>
                     <p>Design de cardápios com layout limpo, organizado e visualmente atrativo. Cada projeto é pensado para valorizar os produtos e reforçar a identidade do negócio com profissionalismo e bom gosto.
                     </p>
-                    <a href="#">Saiba mais</a>
+                    <a href="Servicos/cardapios.html">Saiba mais</a>
                 </div>
 
                 <div>
@@ -111,7 +111,7 @@
                     <h2>Convites Personalizados</h2>
                     <p>Criação de convites únicos, pensados para marcar momentos especiais com um toque de criatividade e cuidado nos detalhes. Cada design é adaptado ao estilo e ocasião, transmitindo a mensagem de forma elegante e autêntica.
                     </p>
-                    <a href="#">Saiba mais</a>
+                    <a href="Servicos/convites.html">Saiba mais</a>
                 </div>
 
                 <div>
@@ -119,7 +119,7 @@
                     <h2>Roll-up</h2>
                     <p>Desenvolvimento de banners roll-up com design impactante e comunicação clara, ideais para eventos, apresentações e espaços comerciais. O foco é destacar a mensagem de forma visualmente atrativa e bem estruturada.
                     </p>
-                    <a href="#">Saiba mais</a>
+                    <a href="Servicos/rollup.html">Saiba mais</a>
                 </div>
 
                 <div>
@@ -127,7 +127,7 @@
                     <h2>Banners Promocionais</h2>
                     <p>Criação de banners promocionais pensados para atrair atenção e comunicar ofertas de forma direta e eficaz. Cada design é adaptado à campanha, com foco em impacto visual e clareza na mensagem.
                     </p>
-                    <a href="#">Saiba mais</a>
+                    <a href="Servicos/banners.html">Saiba mais</a>
                 </div>
 
                 <div>
@@ -160,7 +160,7 @@
                     <h2>Cartões de Visita</h2>
                     <p>Design de cartões de visita profissionais, com foco em simplicidade, elegância e boa apresentação da identidade pessoal ou empresarial. Cada modelo é pensado para causar uma boa primeira impressão e reforçar a marca.
                     </p>
-                    <a href="#">Saiba mais</a>
+                    <a href="Servicos/cartaodevisita.html">Saiba mais</a>
                 </div>
 
                 <div>
@@ -290,7 +290,7 @@
                     <textarea name="Mensagem" rows="6" placeholder="Sua mensagem"></textarea>
                     <button type="submit" class="btn btn2">Enviar mensagem</button>
                 </form>
-                
+                <span id="msg"></span>
             </div>
         </div>
     </div>
@@ -304,11 +304,19 @@
  <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwbA88fMYyc3p4gHusldFcAE5ZKo7QespOhbwBeU9237ISrsQbzOksTNnZUCxQluFXYDg/exec'
     const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
   
     form.addEventListener('submit', e => {
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
+        .then(response => {
+            msg.innerHTML = "Mensagem enviada com sucesso!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
         .catch(error => console.error('Error!', error.message))
     })
   </script>
