@@ -30,6 +30,7 @@
     padding: 0px;
     font-family: 'Neue Power Regular', sans-serif; /* Usando a fonte Regular por padrão */
     box-sizing: border-box;
+    letter-spacing: 0.6px;
 }
 html{
     scroll-behavior: smooth;
@@ -49,6 +50,13 @@ body {
     background-position: right -10%; /* Desloca a imagem mais para baixo */
     background-repeat: no-repeat;
 }
+
+#header img {
+    width: 10%;      /* controla a largura relativa ao pai */
+    height: auto;    /* mantém a proporção da imagem */
+    cursor: pointer;
+}
+
 
 /* Estilo da container */
 .container {
@@ -364,7 +372,7 @@ nav ul li a:hover::after{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 0 20px;
     text-align: center;
     font-size: 14px;
     transition: height 0.5s;
@@ -512,6 +520,10 @@ nav .fa-solid{
 @media only screen and (max-width: 600px){
     #header{
         background-image: url(images/fundoMobile.png);
+    }
+
+    #header img {
+        width: 30%;  /* aumenta a imagem em telas menores */
     }
 
     .header-text{
