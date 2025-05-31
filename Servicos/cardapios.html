@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardápios - Lobo Creative</title>
+    <title>Roll-up - Lobo Creative</title>
     <link rel="stylesheet" href="../style.css">
     <script src="https://kit.fontawesome.com/ba459475e0.js" crossorigin="anonymous"></script>
 
     <style>
-
         .logo {
-            width: 120px;
+            width: 122px;
             height: auto;
             cursor: pointer;
         }
@@ -18,7 +17,7 @@
         .service-detail {
             padding: 120px 0 60px 0;
         }
-        
+
         .service-description {
             margin: 30px 0;
             line-height: 1.6;
@@ -43,6 +42,7 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.3s ease;
+            cursor: pointer;
         }
 
         .gallery-item:hover img {
@@ -66,6 +66,46 @@
 
         .back-button i {
             margin-right: 8px;
+        }
+
+        /* Modal */
+        .modal {
+            margin-top: 70px;
+            display: none;
+            position: fixed;
+            z-index: 999;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #85e208;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -101,16 +141,19 @@
                 </ul>
             </div>
 
-            <h2 style="color: #85e208; margin-top: 40px;">Galeria de Projetos</h2>
+            <h2 style="color: #85e208; margin-top: 40px;">Galeria de Projectos</h2>
             <div class="image-gallery">
                 <div class="gallery-item">
-                    <img src="../images/cardapio-placeholder-1.jpg" alt="Exemplo de Cardápio 1">
+                    <img src="../images/Cardapios/1.jpg" alt="Cardápio 1" class="zoomable">
                 </div>
                 <div class="gallery-item">
-                    <img src="../images/cardapio-placeholder-2.jpg" alt="Exemplo de Cardápio 2">
+                    <img src="../images/Cardapios/2.jpg" alt="Cardápio 2" class="zoomable">
                 </div>
                 <div class="gallery-item">
-                    <img src="../images/cardapio-placeholder-3.jpg" alt="Exemplo de Cardápio 3">
+                    <img src="../images/Cardapios/3.jpg" alt="Cardápio 3" class="zoomable">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/Cardapios/4.jpg" alt="cardapio 4" class="zoomable">
                 </div>
             </div>
 
@@ -121,6 +164,37 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Modal de Imagem -->
+    <div id="imgModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <div class="copyright">
+        Copyright Murade Lobo 2025
+    </div>
+
+    <script>
+        const modal = document.getElementById("imgModal");
+        const modalImg = document.getElementById("modalImage");
+        const closeBtn = document.querySelector(".close");
+
+        document.querySelectorAll('.zoomable').forEach(img => {
+            img.addEventListener('click', () => {
+                modal.style.display = "block";
+                modalImg.src = img.src;
+            });
+        });
+
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
-</html> 
+</html>
