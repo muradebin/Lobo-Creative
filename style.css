@@ -655,3 +655,49 @@ nav .fa-solid{
     font-size: 20px;
     font-weight: bold;
 }
+
+
+/* ----------------- Responsividade para seção Meus Serviços ------------------- */
+@media (max-width: 768px) {
+    #services {
+      padding: 40px 5%;
+    }
+  
+    .services-list {
+      grid-template-columns: 1fr; /* Empilha os serviços em tela pequena */
+      grid-gap: 20px;
+    }
+  
+    .services-list div {
+      padding: 25px;
+      font-size: 14px;
+    }
+  
+    .services-list div h2 {
+      font-size: 22px;
+    }
+  
+    .services-list div i {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .services-list div h2 {
+      font-size: 20px;
+    }
+  
+    .services-list div {
+      padding: 20px;
+    }
+  }
+
+  
+
+
+
+
+
+
+  

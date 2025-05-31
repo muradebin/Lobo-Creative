@@ -107,6 +107,60 @@
             color: #85e208;
             text-decoration: none;
         }
+
+        @media only screen and (max-width: 600px) {
+    .service-detail {
+        padding: 60px 20px 40px 20px;
+    }
+
+    .service-description {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .image-gallery {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .gallery-item {
+        height: 220px;
+    }
+
+    .logo {
+        width: 90px;
+    }
+
+    .back-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .modal-content {
+        max-width: 95%;
+        max-height: 70vh;
+    }
+
+    .close {
+        font-size: 30px;
+        top: 15px;
+        right: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav i.fa-bars,
+    nav i.fa-xmark {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 22px;
+    }
+    }
     </style>
 </head>
 <body>
