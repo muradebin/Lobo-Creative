@@ -302,17 +302,17 @@ nav ul li a:hover::after{
     margin-top: 50px;
 }
 
-/* .services-list .cardapio{
-    background-image: url(images/Cardapios/5.jpg);
-    background-size: auto 150%; /* Aumenta a altura da imagem 
-    background-position: right 0%; /* Desloca a imagem mais para baixo 
+.services-list .cardapio{
+    /* background-image: url(images/Cardapios/5.jpg); */
+    background-size: auto 150%; /* Aumenta a altura da imagem */
+    background-position: right 0%; /* Desloca a imagem mais para baixo */
     background-repeat: no-repeat;
-} */
+}
 
-.services-list .cardapio {
-    position: relative;  /* pra posicionar o ::before */
-    background: none;    /* tira o background original */
-    overflow: hidden;    /* para o blur não vazar */
+/* .services-list .cardapio {
+    position: relative;  /* pra posicionar o ::before 
+    background: none;    /* tira o background original 
+    overflow: hidden;    /* para o blur não vazar 
   }
   
   .services-list .cardapio::before {
@@ -324,14 +324,14 @@ nav ul li a:hover::after{
     background-position: right 0%;
     background-repeat: no-repeat;
     filter: blur(3px);
-    z-index: -1;   /* fica atrás do conteúdo */
-    pointer-events: none; /* para o hover do card continuar pegando */
+    z-index: -1;   /* fica atrás do conteúdo 
+    pointer-events: none; /* para o hover do card continuar pegando 
   }
 
   .services-list .convite {
-    position: relative;  /* pra posicionar o ::before */
-    background: none;    /* tira o background original */
-    overflow: hidden;    /* para o blur não vazar */
+    position: relative;  /* pra posicionar o ::before 
+    background: none;    /* tira o background original 
+    overflow: hidden;    /* para o blur não vazar 
   }
   
   .services-list .convite::before {
@@ -343,10 +343,20 @@ nav ul li a:hover::after{
     background-position: right 0%;
     background-repeat: no-repeat;
     filter: blur(3px);
-    z-index: -1;   /* fica atrás do conteúdo */
-    pointer-events: none; /* para o hover do card continuar pegando */
-  }
+    z-index: -1;   /* fica atrás do conteúdo 
+    pointer-events: none; /* para o hover do card continuar pegando 
+  } */
   
+.saiba-mais{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+    background: #85e208;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
   
 .services-list div{
     background: #262626;
